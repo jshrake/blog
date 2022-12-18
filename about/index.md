@@ -1,10 +1,10 @@
 ---
-layout: layouts/post.njk
-title: About Me
+layout: layouts/base.njk
+title: "jshrake - about"
 templateClass: tmpl-post
 eleventyNavigation:
-  key: About Me
-  order: 3
+  key: About
+  order: 2
 ---
 
-I am a person that writes stuff.
+Hey!

@@ -132,7 +132,7 @@ code {
   padding: 0;
   list-style: none;
   float: left;
-  margin-left: 1em;
+  margin-left: 0.5em;
 }
 .nav-item {
   display: inline-block;
@@ -253,4 +253,17 @@ a[href].direct-link:focus:visited,
 :hover > a[href].direct-link,
 :hover > a[href].direct-link:visited {
   color: #aaa;
+}
+
+/* social icons */
+.social-nav {
+  padding: 0;
+  float: right;
+  margin-right: 1em;
+  margin-top: 1em;
+}
+
+.social-icon {
+  width: 1.5em;
+  height: 1.5em;
 }
