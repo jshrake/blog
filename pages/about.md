@@ -77,7 +77,7 @@ Recommendations: <https://www.linkedin.com/in/justinshrake/>
 
 ## Publications
 
-- 
+- “A First-Passage Kinetic Monte Carlo method for reaction–drift–diffusion processes”, *Journal of Computational Physics* 259.0 (2014), pp. 536–567, <https://www.sciencedirect.com/science/article/pii/S002199911300822X>.
 
 ## Education
 
