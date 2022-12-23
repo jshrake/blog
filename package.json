@@ -30,6 +30,7 @@
     "@11ty/eleventy-plugin-rss": "^1.2.0",
     "@11ty/eleventy-plugin-syntaxhighlight": "^4.1.0",
     "@vidhill/fortawesome-brands-11ty-shortcode": "^1.0.2",
+    "@vidhill/fortawesome-solid-11ty-shortcode": "^1.0.1",
     "dotenv": "^16.0.3",
     "luxon": "^2.4.0",
     "markdown-it": "^13.0.1",

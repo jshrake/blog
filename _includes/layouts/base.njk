@@ -28,6 +28,11 @@
       </ul>
 
       <div class="social-nav">
+      {%- if metadata.socials.email %}
+        <a href="mailto:{{ metadata.socials.email}}" target="_blank" rel="noopener noreferrer">
+          {%- fortawesomeSolid 'envelope',  "social-icon" -%}
+        </a>
+      {% endif -%}
       {%- if metadata.socials.github %}
         <a href="https://github.com/{{ metadata.socials.github}}" target="_blank" rel="noopener noreferrer">
           {%- fortawesomeBrand 'github',  "social-icon" -%}
