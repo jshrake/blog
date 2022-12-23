@@ -1,3 +1,11 @@
+# blog
+
+This repository contains the source code for my blog hosted at [https://jshrake.com](https://jshrake.com).
+
+## Resources
+
+- [pannellum docs](https://pannellum.org/documentation/reference/)
+
 # eleventy-base-blog
 
 A starter repository showing how to build a blog with the [Eleventy](https://github.com/11ty/eleventy) static site generator.

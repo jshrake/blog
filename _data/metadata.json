@@ -1,22 +1,22 @@
 {
-  "title": "Justin Lee Shrake",
-  "url": "https://justinshrake.com/",
+  "title": "Justin Shrake | jshrake.com",
+  "url": "https://jshrake.com/",
   "language": "en",
-  "description": "The blog of Justin Lee Shrake.",
+  "description": "The blog of Justin Shrake.",
   "feed": {
-    "subtitle": "The blog of Justin Lee Shrake.",
+    "subtitle": "The blog of Justin Shrake.",
     "filename": "feed.xml",
     "path": "/feed/feed.xml",
-    "id": "https://justinshrake.com/"
+    "id": "https://jshrake.com/"
   },
   "jsonfeed": {
     "path": "/feed/feed.json",
-    "url": "https://justinshrake.com/feed/feed.json"
+    "url": "https://jshrake.com/feed/feed.json"
   },
   "author": {
-    "name": "Justin Lee Shrake",
+    "name": "Justin Shrake",
     "email": "hi@justinshrake.com",
-    "url": "https://justinshrake.com/about-me/"
+    "url": "https://jshrake.com/about"
   },
   "socials": {
     "github": "jshrake",
