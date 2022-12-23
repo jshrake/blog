@@ -267,3 +267,10 @@ a[href].direct-link:focus:visited,
   width: 1.5em;
   height: 1.5em;
 }
+
+/* models */
+.model {
+  width: 90vw;
+  height: 1024px;
+  text-align: center;
+}
