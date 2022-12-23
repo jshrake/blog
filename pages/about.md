@@ -56,9 +56,9 @@ You can find me on the web at [GitHub](https://github.com/jshrake), [Instagram](
 
 ## Professional
 
-- Lead Developer Technology Engineer, NVIDIA (2022-Present)
-- Lead Software Engineer, Magnopus (2020-2022)
-- Senior Software Engineer, Oblong Industries (2014-2020)
+- Lead Developer Technology Engineer, NVIDIA (2022-Present), [\[1\]](https://github.com/NVIDIA-Omniverse/kit-osc)
+- Lead Software Engineer, Magnopus (2020-2022), [\[1\]](https://www.magnopus.com/platform)
+- Senior Software Engineer, Oblong Industries (2014-2020) [\[1\]](https://vimeo.com/375969472), [\[2\]](http://johnbcarpenter.com/ibm.html), [\[3\]](https://venturebeat.com/business/how-oblong-helped-ibm-build-its-immersion-rooms-with-giant-displays/)
 - Software Engineer, AT&T Government Solutions (2011-2014)
 
 Recommendations: <https://www.linkedin.com/in/justinshrake/>
