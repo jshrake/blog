@@ -50,6 +50,8 @@ You can find me on the web at [GitHub](https://github.com/jshrake), [Instagram](
 
 [Contact me](mailto:hc19ysv9z@mozmail.com).
 
+<br/>
+
 # Résumé
 
 ## Skills
@@ -70,8 +72,8 @@ Recommendations: <https://www.linkedin.com/in/justinshrake/>
 ## Projects
 
 - [healthkit-to-sqlite](https://github.com/jshrake/healthkit-to-sqlite) (2022)
-- [creative coding and generative art](https://instagram.com/j2rgb) (2018-)
 - [snap math](https://snapmath.netlify.app) (2022)
+- [creative coding and generative art](https://instagram.com/j2rgb) (2018-)
 - [mtg on curve](https://mtgoncurve.com) (2018)
 - [lagerstroemia at Digital Nature](http://johnbcarpenter.com/artworks/arboretum/index.html) (2016)
 
