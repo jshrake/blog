@@ -11,17 +11,17 @@ Last updated December 2022.
 
 ## reading
 
-- Dan Simmons, *The Terror*
+- Adrian Tchaikovsky, *Children of Ruin*
 
 ## queue
 
-- Adrian Tchaikovsky, *Children of Ruin*
 - Ted Chiang, *Exhalation*
 
 ## history
 
 ### 2022
 
+- Dan Simmons, *The Terror*
 - Scott Smith, *A Simple Plan*
 - Scott Smith, *The Ruins*
 - David Graeber, *Debt - Updated and Expanded*
@@ -80,13 +80,6 @@ Last updated December 2022.
 - Neal Stephenson, *Snow Crash*
 - Ernest Cline, *Armada*
 - Ernest Cline, *Ready Player One*
-- R. A. Salvatore, *The Legacy*
-- R. A. Salvatore, *The Legacy*
-- R. A. Salvatore, *Dark Mirror*
-- R. A. Salvatore, *The Halfing's Gem*
-- R. A. Salvatore, *Streams of Silver*
-- R. A. Salvatore, *The Crystal Shard*
-- R. A. Salvatore, *Sojourn*
 
 ### 2015
 
