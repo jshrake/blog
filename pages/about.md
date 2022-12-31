@@ -44,7 +44,7 @@ p {
 
 I'm a software developer with eleven years of professional experience building interactive real-time graphics software across a variety of platforms. I live in Los Angeles, California and have a BS in Mathematics and a minor in Statistical Sciences from the University of California, Santa Barbara. I currently work at [NVIDIA](https://en.wikipedia.org/wiki/Nvidia) building [Omniverse](https://en.wikipedia.org/wiki/Nvidia_Omniverse), a real-time simulation platform. 
 
-My interests include [programming](/software), [reading](/books), [gaming](/games), mathematics, photography, cartography, [generative art](https://instagram.com/j2rgb), hiking, probabilistic simulation methods, and playing guitar.
+My interests include [programming](/software), [reading](/books), [gaming](/games), mathematics, [generative art](https://instagram.com/j2rgb), hiking, probabilistic simulation methods, and playing guitar.
 
 You can find me on the web at [GitHub](https://github.com/jshrake), [Instagram](https://instagram.com/j2rgb), [LinkedIn](https://www.linkedin.com/in/justinshrake/), [Mastodon](https://mastodon.gamedev.place/@justinshrake), [Shadertoy](https://www.shadertoy.com/user/j2rgb), [VertexShaderArt](https://www.vertexshaderart.com/user/jshrake), [Twitter](https://twitter.com/j2rgb), [Sketchfab](https://sketchfab.com/jshrake), and [Youtube](https://www.youtube.com/@justinshrake).
 
@@ -69,6 +69,7 @@ Recommendations: <https://www.linkedin.com/in/justinshrake/>
 
 ## Projects
 
+- [healthkit-to-sqlite](https://github.com/jshrake/healthkit-to-sqlite) (2022)
 - [creative coding and generative art](https://instagram.com/j2rgb) (2018-)
 - [snap math](https://snapmath.netlify.app) (2022)
 - [mtg on curve](https://mtgoncurve.com) (2018)
