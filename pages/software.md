@@ -10,10 +10,19 @@ eleventyNavigation:
 
 # Software
 
-Last updated December 2022.
+## [card-game-calculator](https://github.com/jshrake/card-game-calculator)
+
+ <video width="320" height="240" no-controls autoplay loop>
+  <source src="/img/card-game-calculator.webm" type="video/webm">
+  Your browser does not support the video tag.
+</video>
+
+A hypergeometric distribution calculator for card games, built with Svelte and Typescript.
+
+---
 
 ## [healthkit-to-sqlite](https://github.com/jshrake/healthkit-to-sqlite/)
 
-A command-line tool written in Rust to convert Apple HealthKit data to a SQLite database.
-
 [![healthkit-to-sqlite](/img/healthkit-to-sqlite.webp)](https://github.com/jshrake/healthkit-to-sqlite/)
+
+A command-line tool to convert Apple HealthKit data to a SQLite database, built with Rust.
