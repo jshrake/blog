@@ -10,19 +10,7 @@ eleventyNavigation:
 
 # Software
 
-## [card-game-calculator](https://github.com/jshrake/card-game-calculator)
-
- <video width="320" height="240" no-controls autoplay loop>
-  <source src="/img/card-game-calculator.webm" type="video/webm">
-  Your browser does not support the video tag.
-</video>
-
-A hypergeometric distribution calculator for card games, built with Svelte and Typescript.
-
----
-
-## [healthkit-to-sqlite](https://github.com/jshrake/healthkit-to-sqlite/)
-
-[![healthkit-to-sqlite](/img/healthkit-to-sqlite.webp)](https://github.com/jshrake/healthkit-to-sqlite/)
-
-A command-line tool to convert Apple HealthKit data to a SQLite database, built with Rust.
+- [card-game-calculator](https://github.com/jshrake/card-game-calculator): A simple hypergeometric distribution calculator for calculating card draw probabilities, built with svelte, typescript, and charts.css.
+- [healthkit-to-sqlite](https://github.com/jshrake/healthkit-to-sqlite/): A command-line tool to convert Apple HealthKit data to a SQLite database, built with Rust.
+- [mtgoncurve](https://github.com/mtgoncurve/landlord): A Magic: The Gathering card draw and mulligan simulation to calculate the probability to play cards on curve, built with Rust.
+- [grimoire](https://github.com/jshrake/grimoire-legacy): A cross-platform tool for building creative experiences, built with Rust and OpenGL.

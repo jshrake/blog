@@ -43,11 +43,6 @@
           {%- fortawesomeBrand 'mastodon',  "social-icon" -%}
         </a>
       {% endif -%}
-        {%- if metadata.socials.twitter %}
-        <a href="https://twitter.com/{{ metadata.socials.twitter | replace("@", "") }}" target="_blank" rel="noopener noreferrer">
-          {%- fortawesomeBrand 'twitter',  "social-icon" -%}
-        </a>
-      {% endif -%}
       {%- if metadata.socials.kofi %}
         <a href="https://ko-fi.com/{{ metadata.socials.kofi | replace("@", "") }}" target="_blank" rel="noopener noreferrer">
           {%- fortawesomeSolid 'coffee',  "social-icon" -%}
@@ -56,6 +51,11 @@
       {%- if metadata.socials.instagram %}
         <a href="https://instagram.com/{{ metadata.socials.instagram }}" target="_blank" rel="noopener noreferrer">
           {%- fortawesomeBrand 'instagram',  "social-icon" -%}
+        </a>
+      {% endif -%}
+      {%- if metadata.socials.twitter %}
+        <a href="https://twitter.com/{{ metadata.socials.twitter | replace("@", "") }}" target="_blank" rel="noopener noreferrer">
+          {%- fortawesomeBrand 'twitter',  "social-icon" -%}
         </a>
       {% endif -%}
       </div>
