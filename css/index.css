@@ -17,7 +17,6 @@
   --text-color-link-visited: #17050F;
 }
 
-/*
 @media (prefers-color-scheme: dark) {
   :root {
     --color-gray-20: #e0e0e0;
@@ -30,8 +29,6 @@
     --background-color: #15202b;
   }
 }
-*/
-
 
 /* Global stylesheet */
 * {

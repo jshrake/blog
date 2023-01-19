@@ -71,10 +71,10 @@ Recommendations: <https://www.linkedin.com/in/justinshrake/>
 
 ## Projects
 
+- [cardgamecalculator.com](https://cardgamecalculator.com) (2023)
 - [healthkit-to-sqlite](https://github.com/jshrake/healthkit-to-sqlite) (2022)
-- [snap math](https://snapmath.netlify.app) (2022)
 - [creative coding and generative art](https://instagram.com/j2rgb) (2018-)
-- [mtg on curve](https://mtgoncurve.com) (2018)
+- [mtgoncurve.com](https://mtgoncurve.com) (2018)
 - [lagerstroemia at Digital Nature](http://johnbcarpenter.com/artworks/arboretum/index.html) (2016)
 
 ## Talks
