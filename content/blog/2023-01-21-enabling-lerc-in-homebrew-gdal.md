@@ -10,6 +10,8 @@ layout: layouts/post.njk
 draft: false
 ---
 
+**Update (2022-01-22)**: I opened a [pull request to add lerc to Homebrew](https://github.com/Homebrew/homebrew-core/pull/121231). Once this is merged, we can update the `libtiff` formula to enable lerc and then the Homebrew installed GDAL will have lerc enabled for everyone by default!
+
 After reading <https://kokoalberti.com/articles/geotiff-compression-optimization-guide/>, I wanted to test the results of LERC compression myself. Unfortunately, as of this writing, LERC is not enabled in the Homebrew version of GDAL. Here are the steps to enable it:
 
 1. Clone and build <https://github.com/Esri/lerc.git>
