@@ -41,7 +41,7 @@ After reading <https://kokoalberti.com/articles/geotiff-compression-optimization
         --with-jpeg-include-dir=#{Formula["jpeg-turbo"].opt_include}
     ```
 
-    Replace the paths `with-lerc-include-dir` and `with-lerc-lib-dir` with the path you cloned above. 
+    Replace the paths `with-lerc-include-dir` and `with-lerc-lib-dir` with the path you cloned above.
     Then, copy the patch and apply it:
 
     ```bash
