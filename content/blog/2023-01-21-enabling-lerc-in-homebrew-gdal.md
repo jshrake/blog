@@ -10,7 +10,7 @@ layout: layouts/post.njk
 draft: false
 ---
 
-After reading <https://kokoalberti.com/articles/geotiff-compression-optimization-guide/>, I wanted to checkout the results of LERC compression myself. Unfortunately, as of this writing, LERC is not enabled in the Homebrew version of GDAL. Here are the steps to enable it:
+After reading <https://kokoalberti.com/articles/geotiff-compression-optimization-guide/>, I wanted to test the results of LERC compression myself. Unfortunately, as of this writing, LERC is not enabled in the Homebrew version of GDAL. Here are the steps to enable it:
 
 1. Clone and build <https://github.com/Esri/lerc.git>
 
