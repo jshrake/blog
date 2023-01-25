@@ -22,9 +22,10 @@
     --color-gray-20: #e0e0e0;
     --color-gray-50: #C0C0C0;
     --color-gray-90: #dad8d8;
+    --color-yellow: #f0b40f;
 
-    --text-color-link: #f0b40f;
-    --text-color-link-visited: #f0b40f;
+    --text-color-link: var(--color-yellow);
+    --text-color-link-visited: var(--color-yellow);
 
     --background-color: #242423;
   }
@@ -32,6 +33,10 @@
   .social-nav {
     --text-color-link: var(--color-gray-20);
     --text-color-link-visited: var(--color-gray-20);
+  }
+  .social-nav a:hover {
+    --text-color-link: var(--color-yellow);
+    --text-color-link-visited: var(--color-yellow);
   }
 }
 /* Global stylesheet */
