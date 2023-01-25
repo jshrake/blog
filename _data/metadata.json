@@ -2,9 +2,9 @@
   "title": "Justin Shrake",
   "url": "https://jshrake.com/",
   "language": "en",
-  "description": "The blog of Justin Shrake.",
+  "description": "my blog",
   "feed": {
-    "subtitle": "The blog of Justin Shrake.",
+    "subtitle": "my blog",
     "filename": "feed.xml",
     "path": "/feed/feed.xml",
     "id": "https://jshrake.com/"
@@ -15,7 +15,7 @@
   },
   "author": {
     "name": "Justin Shrake",
-    "email": "hi@justinshrake.com",
+    "email": "hc19ysv9z@mozmail.com",
     "url": "https://jshrake.com/about"
   },
   "socials": {
