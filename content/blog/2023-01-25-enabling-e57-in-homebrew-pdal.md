@@ -4,7 +4,7 @@ description:
 date: 2023-01-24
 tags:
   - geospatial
-  - gdal
+  - pdal
   - homebrew
 layout: layouts/post.njk
 draft: false
