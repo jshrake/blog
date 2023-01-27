@@ -14,39 +14,42 @@ draft: false
 
 - [ ] Add E57 plugin: [homebrew/homebrew-core#121301](https://github.com/Homebrew/homebrew-core/pull/121301)
 
-Perform the following steps to enable the E57 reader and writer plugins in Homebrew PDAL:
+If you use Homebrew PDAL to read and write E57 files, you'll see the following error:
 
-1. Edit the homebrew `pdal` formula with the following patch:
+```bash
+PDAL: Couldn't create writer stage of type 'writers.e57'.
+You probably have a version of PDAL that didn't come with a plugin
+you're trying to load.  Please see the FAQ at https://pdal.io/faq
+```
 
-    ```diff
-    diff --git a/Formula/pdal.rb b/Formula/pdal.rb
-    index 4387411006f30..5c9f410ef2087 100644
-    --- a/Formula/pdal.rb
-    +++ b/Formula/pdal.rb
-    @@ -34,12 +34,14 @@ class Pdal < Formula
-    depends_on "laszip"
-    depends_on "libpq"
-    depends_on "numpy"
-    +  depends_on "xerces-c"
-    
-    fails_with gcc: "5" # gdal is compiled with GCC
-    
-    def install
-        system "cmake", ".", *std_cmake_args,
-                            "-DWITH_LASZIP=TRUE",
-    +                         "-DBUILD_PLUGIN_E57=ON",
-                            "-DBUILD_PLUGIN_GREYHOUND=ON",
-                            "-DBUILD_PLUGIN_ICEBRIDGE=ON",
-                            "-DBUILD_PLUGIN_PGPOINTCLOUD=ON",
-    ```
+You can enable E57 support by applying the below patch to the `pdal` formula and rebuilding.
 
-    Copy the above diff and apply it:
+```diff
+diff --git a/Formula/pdal.rb b/Formula/pdal.rb
+index 4387411006f30..eb1dba935012a 100644
+--- a/Formula/pdal.rb
++++ b/Formula/pdal.rb
+@@ -29,6 +29,7 @@ class Pdal < Formula
 
-    ```bash
-    cd "$(brew --repository homebrew/core)"
-    pbpaste | patch -p1
-    brew reinstall --build-from-source pdal
-    git restore Formula/pdal.rb
-    ```
+depends_on "cmake" => :build
+depends_on "pkg-config" => :build
++  depends_on "xerces-c" => :build
+depends_on "gdal"
+depends_on "hdf5"
+depends_on "laszip"
+@@ -40,6 +41,7 @@ class Pdal < Formula
+def install
+    system "cmake", ".", *std_cmake_args,
+                        "-DWITH_LASZIP=TRUE",
++                         "-DBUILD_PLUGIN_E57=ON",
+                        "-DBUILD_PLUGIN_GREYHOUND=ON",
+                        "-DBUILD_PLUGIN_ICEBRIDGE=ON",
+                        "-DBUILD_PLUGIN_PGPOINTCLOUD=ON",
+```
 
-2. Your Homebrew installed `pdal` should now have the E57 plugin available
+```bash
+cd "$(brew --repository homebrew/core)"
+pbpaste | patch -p1
+brew reinstall --build-from-source pdal
+git restore Formula/pdal.rb
+```
