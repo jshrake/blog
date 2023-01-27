@@ -16,11 +16,8 @@ draft: false
 
 If you use Homebrew PDAL to read and write E57 files, you'll see the following error:
 
-```bash
-PDAL: Couldn't create writer stage of type 'writers.e57'.
-You probably have a version of PDAL that didn't come with a plugin
-you're trying to load.  Please see the FAQ at https://pdal.io/faq
-```
+> PDAL: Couldn't create writer stage of type 'writers.e57'.
+> You probably have a version of PDAL that didn't come with a plugin you're trying to load.  Please see the FAQ at https://pdal.io/faq
 
 You can enable E57 support by applying the below patch to the `pdal` formula and rebuilding.
 
@@ -46,6 +43,8 @@ def install
                         "-DBUILD_PLUGIN_ICEBRIDGE=ON",
                         "-DBUILD_PLUGIN_PGPOINTCLOUD=ON",
 ```
+
+Copy the above diff and apply it:
 
 ```bash
 cd "$(brew --repository homebrew/core)"
