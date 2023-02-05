@@ -3,8 +3,6 @@ title: Enabling E57 in Homebrew PDAL
 description: 
 date: 2023-01-24
 tags:
-  - geospatial
-  - pdal
   - homebrew
 layout: layouts/post.njk
 draft: false
