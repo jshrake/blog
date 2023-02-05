@@ -3,8 +3,6 @@ title: Enabling LERC in Homebrew GDAL
 description: 
 date: 2023-01-21
 tags:
-  - geospatial
-  - gdal
   - homebrew
 layout: layouts/post.njk
 draft: false
