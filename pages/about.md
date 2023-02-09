@@ -23,8 +23,9 @@ You can find me on the web at [GitHub](https://github.com/jshrake), [Instagram](
 ## Skills
 
 - Languages: Rust, C++, TypeScript, Python, Swift, C#, GLSL
-- Technologies: OpenGL, WebGL, WebGPU, Metal, USD, GLTF, React, Docker, Git, Blender, Unity, Unreal Engine, Omniverse
+- Technologies: Git, Docker, React, Svelte, OpenGL, WebGL, WebGPU, Metal, USD, GLTF
 - Platforms: Windows, macOS, iOS, Ubuntu
+- Applications: Blender, Unity, Omniverse
 
 ## Professional
 
