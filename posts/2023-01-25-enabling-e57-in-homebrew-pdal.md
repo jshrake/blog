@@ -5,7 +5,7 @@ date: 2023-01-24
 tags:
   - homebrew
 layout: layouts/post.njk
-draft: false
+draft: true
 ---
 
 **Update (2022-01-25)**: Once the following pull request is merged, the E57 plugin will be available in Homebrew PDAL by default.
