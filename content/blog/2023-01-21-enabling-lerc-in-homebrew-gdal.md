@@ -5,7 +5,7 @@ date: 2023-01-21
 tags:
   - homebrew
 layout: layouts/post.njk
-draft: false
+draft: true
 ---
 
 **Update (2022-01-22)**: Once the following pull requests are merged, LERC will be enabled in Homebrew GDAL by default.
