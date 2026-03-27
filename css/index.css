@@ -278,6 +278,32 @@ a[href].direct-link:focus:visited,
   height: 1.5em;
 }
 
+/* Art grid */
+.art-grid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 1rem;
+  max-width: 72rem;
+}
+
+.art-grid-item {
+  display: block;
+  line-height: 0;
+}
+
+.art-grid-item img {
+  width: 100%;
+  max-width: none;
+  height: auto;
+  border-radius: 4px;
+}
+
+@media (max-width: 600px) {
+  .art-grid {
+    grid-template-columns: repeat(2, 1fr);
+  }
+}
+
 /* models */
 .model {
   width: 90vw;

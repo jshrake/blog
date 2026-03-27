@@ -1,8 +1,14 @@
 ---
-layout: layouts/home.njk
+layout: layouts/base.njk
+title: "Justin Shrake | Art"
 eleventyNavigation:
-  key: Blog
+  key: Art
   order: 1
 ---
-{% set postslist = collections.posts %}
-{% include "postslist.njk" %}
+<div class="art-grid">
+{%- for item in art %}
+  <a href="{{ item.link }}" class="art-grid-item">
+    <img src="{{ item.image | url }}" alt="{{ item.title }}" loading="lazy">
+  </a>
+{%- endfor %}
+</div>
