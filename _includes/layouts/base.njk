@@ -18,6 +18,7 @@
   </head>
   <body>
     <header>
+      <a href="/" class="home">{{ metadata.author.name }}</a>
       {#- Read more about `eleventy-navigation` at https://www.11ty.dev/docs/plugins/navigation/ #}
       <ul class="nav">
       {%- for entry in collections.all | eleventyNavigation %}
@@ -26,24 +27,14 @@
       </ul>
 
       <div class="social-nav">
-      {%- if metadata.socials.email %}
-        <a href="mailto:{{ metadata.socials.email}}" target="_blank" rel="noopener noreferrer">
-          {%- fortawesomeSolid 'envelope',  "social-icon" -%}
-        </a>
-      {% endif -%}
       {%- if metadata.socials.github %}
         <a href="https://github.com/{{ metadata.socials.github}}" target="_blank" rel="noopener noreferrer">
           {%- fortawesomeBrand 'github',  "social-icon" -%}
         </a>
       {% endif -%}
-      {%- if metadata.socials.mastodon %}
-        <a rel="me" href="{{ metadata.socials.mastodon }}">
-          {%- fortawesomeBrand 'mastodon',  "social-icon" -%}
-        </a>
-      {% endif -%}
-      {%- if metadata.socials.kofi %}
-        <a href="https://ko-fi.com/{{ metadata.socials.kofi | replace("@", "") }}" target="_blank" rel="noopener noreferrer">
-          {%- fortawesomeSolid 'coffee',  "social-icon" -%}
+      {%- if metadata.socials.x %}
+        <a href="https://x.com/{{ metadata.socials.x }}" target="_blank" rel="noopener noreferrer">
+          {%- fortawesomeBrand 'x-twitter',  "social-icon" -%}
         </a>
       {% endif -%}
       {%- if metadata.socials.instagram %}
@@ -51,9 +42,14 @@
           {%- fortawesomeBrand 'instagram',  "social-icon" -%}
         </a>
       {% endif -%}
-      {%- if metadata.socials.twitter %}
-        <a href="https://twitter.com/{{ metadata.socials.twitter | replace("@", "") }}" target="_blank" rel="noopener noreferrer">
-          {%- fortawesomeBrand 'twitter',  "social-icon" -%}
+      {%- if metadata.socials.mastodon %}
+        <a rel="me" href="{{ metadata.socials.mastodon }}">
+          {%- fortawesomeBrand 'mastodon',  "social-icon" -%}
+        </a>
+      {% endif -%}
+      {%- if metadata.socials.email %}
+        <a href="mailto:{{ metadata.socials.email}}" target="_blank" rel="noopener noreferrer">
+          {%- fortawesomeSolid 'envelope',  "social-icon" -%}
         </a>
       {% endif -%}
       </div>
