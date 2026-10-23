@@ -1,3 +1,4 @@
+/* Graphite syntax colors; retain the stylesheet URL for existing pages. */
 code[class*="language-"], pre[class*="language-"] {
 	font-size: 14px;
 	line-height: 1.375;
@@ -13,8 +14,8 @@ code[class*="language-"], pre[class*="language-"] {
 	-moz-hyphens: none;
 	-ms-hyphens: none;
 	hyphens: none;
-	background: #272822;
-	color: #f8f8f2;
+	background: var(--surface-color);
+	color: var(--text-color);
 }
 pre[class*="language-"] {
 	padding: 1.5em 0;
@@ -26,43 +27,43 @@ pre[class*="language-"] {
 	border-radius: .3em;
 }
 .token.comment, .token.prolog, .token.doctype, .token.cdata {
-	color: #75715e;
+	color: var(--text-color-muted);
 }
 .token.punctuation {
-	color: #f8f8f2;
+	color: var(--text-color);
 }
 .token.namespace {
-	opacity: .7;
+	color: var(--text-color-muted);
 }
 .token.operator, .token.boolean, .token.number {
-	color: #fd971f;
+	color: var(--code-accent-color);
 }
 .token.property {
-	color: #f4bf75;
+	color: var(--text-color-link);
 }
 .token.tag {
-	color: #66d9ef;
+	color: var(--code-accent-color);
 }
 .token.string {
-	color: #a1efe4;
+	color: var(--text-color-link);
 }
 .token.selector {
-	color: #ae81ff;
+	color: var(--code-accent-color);
 }
 .token.attr-name {
-	color: #fd971f;
+	color: var(--code-accent-color);
 }
 .token.entity, .token.url, .language-css .token.string, .style .token.string {
-	color: #a1efe4;
+	color: var(--text-color-link);
 }
 .token.attr-value, .token.keyword, .token.control, .token.directive, .token.unit {
-	color: #a6e22e;
+	color: var(--text-color-link-hover);
 }
 .token.statement, .token.regex, .token.atrule {
-	color: #a1efe4;
+	color: var(--text-color-link);
 }
 .token.placeholder, .token.variable {
-	color: #66d9ef;
+	color: var(--code-accent-color);
 }
 .token.deleted {
 	text-decoration: line-through;
@@ -77,12 +78,12 @@ pre[class*="language-"] {
 	font-weight: bold;
 }
 .token.important {
-	color: #f92672;
+	color: var(--text-color-link-hover);
 }
 .token.entity {
 	cursor: help;
 }
 pre > code.highlight {
-	outline: 0.4em solid #f92672;
+	outline: 0.4em solid var(--focus-color);
 	outline-offset: .4em;
 }
