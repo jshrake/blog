@@ -1,0 +1,33 @@
+---
+permalink: "{{ metadata.jsonfeed.path }}"
+layout: false
+eleventyExcludeFromCollections: true
+---
+{
+  "version": "https://jsonfeed.org/version/1.1",
+  "title": {{ metadata.title | dump | safe }},
+  "language": {{ metadata.language | dump | safe }},
+  "home_page_url": {{ metadata.url | addPathPrefixToFullUrl | dump | safe }},
+  "feed_url": {{ metadata.jsonfeed.path | htmlBaseUrl(metadata.url) | dump | safe }},
+  "description": {{ metadata.description | dump | safe }},
+  "author": {
+    "name": {{ metadata.author.name | dump | safe }},
+    "url": {{ metadata.author.url | dump | safe }}
+  },
+  "authors": [{
+    "name": {{ metadata.author.name | dump | safe }},
+    "url": {{ metadata.author.url | dump | safe }}
+  }],
+  "items": [
+    {%- for post in collections.posts | reverse %}
+    {% set absolutePostUrl %}{{ post.url | htmlBaseUrl(metadata.url) }}{% endset %}
+    {
+      "id": {{ absolutePostUrl | dump | safe }},
+      "url": {{ absolutePostUrl | dump | safe }},
+      "title": {{ post.data.title | dump | safe }},
+      "content_html": {{ post.content | renderTransforms(post.data.page, metadata.url) | dump | safe }},
+      "date_published": {{ post.date | dateToRfc3339 | dump | safe }}
+    }{% if not loop.last %},{% endif %}
+    {%- endfor %}
+  ]
+}

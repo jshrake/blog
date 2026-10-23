@@ -4,18 +4,20 @@
   "description": "A starter repository for a blog web site using the Eleventy site generator.",
   "type": "module",
   "scripts": {
-    "build": "npx @11ty/eleventy",
-    "build-nocolor": "cross-env NODE_DISABLE_COLORS=1 npx @11ty/eleventy",
-    "build-ghpages": "npx @11ty/eleventy --pathprefix=/eleventy-base-blog/",
-    "start": "npx @11ty/eleventy --serve --quiet",
-    "start-ghpages": "npx @11ty/eleventy --pathprefix=/eleventy-base-blog/ --serve --quiet",
-    "debug": "cross-env DEBUG=Eleventy* npx @11ty/eleventy",
-    "debugstart": "cross-env DEBUG=Eleventy* npx @11ty/eleventy --serve --quiet",
-    "benchmark": "cross-env DEBUG=Eleventy:Benchmark* npx @11ty/eleventy",
-    "bench": "cross-env DEBUG=Eleventy:Benchmark* npx @11ty/eleventy",
-    "watch": "npx @11ty/eleventy --watch",
-    "serve": "npx @11ty/eleventy --serve",
-    "dev": "npx @11ty/eleventy --serve"
+    "build": "eleventy",
+    "build-nocolor": "cross-env NODE_DISABLE_COLORS=1 eleventy",
+    "build-ghpages": "eleventy --pathprefix=/eleventy-base-blog/",
+    "start": "eleventy --serve --quiet",
+    "start-ghpages": "eleventy --pathprefix=/eleventy-base-blog/ --serve --quiet",
+    "debug": "cross-env DEBUG=Eleventy* eleventy",
+    "debugstart": "cross-env DEBUG=Eleventy* eleventy --serve --quiet",
+    "benchmark": "cross-env DEBUG=Eleventy:Benchmark* eleventy",
+    "bench": "cross-env DEBUG=Eleventy:Benchmark* eleventy",
+    "watch": "eleventy --watch",
+    "serve": "eleventy --serve",
+    "dev": "eleventy --serve",
+    "test": "node --test",
+    "check": "npm test && npm run build"
   },
   "repository": {
     "type": "git",
@@ -24,7 +26,7 @@
   "author": "Zach Leatherman (https://zachleat.com/)",
   "license": "MIT",
   "engines": {
-    "node": ">=18"
+    "node": ">=24"
   },
   "funding": {
     "type": "opencollective",
@@ -36,19 +38,21 @@
   "homepage": "https://github.com/11ty/eleventy-base-blog#readme",
   "devDependencies": {
     "@11ty/eleventy": "^3.1.7",
-    "@11ty/eleventy-img": "^7.0.0",
+    "@11ty/eleventy-img": "^7.1.1",
     "@11ty/eleventy-navigation": "^1.0.5",
-    "@11ty/eleventy-plugin-rss": "^3.0.0",
+    "@11ty/eleventy-plugin-rss": "^3.1.0",
     "@11ty/eleventy-plugin-syntaxhighlight": "^5.0.2",
+    "@fortawesome/fontawesome-svg-core": "^7.3.1",
+    "@fortawesome/free-brands-svg-icons": "^7.3.1",
+    "@fortawesome/free-solid-svg-icons": "^7.3.1",
+    "cheerio": "^1.2.0",
     "cross-env": "^10.1.0",
+    "dotenv": "^18.0.9",
     "luxon": "^3.7.2",
+    "markdown-it": "^15.0.3",
+    "markdown-it-anchor": "^10.0.0",
     "prismjs": "^1.30.0",
-    "zod": "^4.4.3",
-    "@vidhill/fortawesome-brands-11ty-shortcode": "^1.0.2",
-    "markdown-it": "^13.0.1",
-    "markdown-it-anchor": "^8.6.4",
-    "dotenv": "^16.0.3",
-    "@vidhill/fortawesome-solid-11ty-shortcode": "^1.0.1"
+    "zod": "^4.6.7"
   },
   "dependencies": {
     "@zachleat/heading-anchors": "^1.0.5"

@@ -3,19 +3,24 @@ import { feedPlugin } from "@11ty/eleventy-plugin-rss";
 import pluginSyntaxHighlight from "@11ty/eleventy-plugin-syntaxhighlight";
 import pluginNavigation from "@11ty/eleventy-navigation";
 import { eleventyImageTransformPlugin } from "@11ty/eleventy-img";
+import dotenv from "dotenv";
+import markdownIt from "markdown-it";
+import markdownItAnchor from "markdown-it-anchor";
 
 import pluginFilters from "./_config/filters.js";
+import pluginIcons from "./_config/icons.js";
+import metadata from "./_data/metadata.js";
+
+dotenv.config({ quiet: true });
 
 /** @param {import("@11ty/eleventy").UserConfig} eleventyConfig */
 export default async function(eleventyConfig) {
 	// Drafts, see also _data/eleventyDataSchema.js
 	eleventyConfig.addPreprocessor("drafts", "*", (data, content) => {
-		if (data.draft) {
-			data.title = `${data.title} (draft)`;
-		}
-
-		if(data.draft && process.env.ELEVENTY_RUN_MODE === "build") {
-			return false;
+		if(data.draft && process.env.ELEVENTY_RUN_MODE === "build" && process.env.ELEVENTY_ENV !== "development") {
+			// Keep legacy empty tag URLs, but never publish draft pages or feed entries.
+			data.eleventyExcludeFromCollections = true;
+			data.permalink = false;
 		}
 	});
 
@@ -23,7 +28,8 @@ export default async function(eleventyConfig) {
 	// For example, `./public/css/` ends up in `_site/css/`
 	eleventyConfig
 		.addPassthroughCopy({
-			"./public/": "/"
+			"./public/": "/",
+			"./css/": "/css/"
 		})
 		.addPassthroughCopy("./content/feed/pretty-atom-feed.xsl");
 
@@ -57,32 +63,24 @@ export default async function(eleventyConfig) {
 		preAttributes: { tabindex: 0 }
 	});
 	eleventyConfig.addPlugin(pluginNavigation);
+	eleventyConfig.addPlugin(pluginIcons);
 	eleventyConfig.addPlugin(HtmlBasePlugin);
 	eleventyConfig.addPlugin(InputPathToUrlTransformPlugin);
 
 	eleventyConfig.addPlugin(feedPlugin, {
-		type: "atom", // or "rss", "json"
-		outputPath: "/feed/feed.xml",
+		type: "atom",
+		outputPath: metadata.feed.path,
 		stylesheet: "pretty-atom-feed.xsl",
-		templateData: {
-			eleventyNavigation: {
-				key: "Feed",
-				order: 4
-			}
-		},
-		collection: {
-			name: "posts",
-			limit: 10,
-		},
+		collection: { name: "posts", limit: 0 },
+		// Match the old feed's exclusion from the sitemap and page listing.
+		templateData: { eleventyComputed: { eleventyExcludeFromCollections: () => true } },
 		metadata: {
-			language: "en",
-			title: "Blog Title",
-			subtitle: "This is a longer description about your blog.",
-			base: "https://example.com/",
-			author: {
-				name: "Your Name"
-			}
-		}
+			language: metadata.language,
+			title: metadata.title,
+			subtitle: metadata.description,
+			base: metadata.url,
+			author: metadata.author,
+		},
 	});
 
 	// Image optimization: https://www.11ty.dev/docs/plugins/image/#eleventy-transform
@@ -108,6 +106,18 @@ export default async function(eleventyConfig) {
 
 	// Filters
 	eleventyConfig.addPlugin(pluginFilters);
+
+	// Preserve Markdown autolinks and existing heading fragments.
+	eleventyConfig.setLibrary("md", markdownIt({ html: true, linkify: true }).use(markdownItAnchor, {
+		permalink: markdownItAnchor.permalink.ariaHidden({ placement: "after", class: "direct-link", symbol: "#" }),
+		level: [1, 2, 3, 4],
+		slugify: eleventyConfig.getFilter("slugify"),
+	}));
+
+	eleventyConfig.addCollection("tagList", collection => {
+		const tags = new Set(collection.getAll().flatMap(item => item.data.tags || []));
+		return [...tags].filter(tag => !["all", "nav", "post", "posts"].includes(tag));
+	});
 
 	eleventyConfig.addPlugin(IdAttributePlugin, {
 		// by default we use Eleventy’s built-in `slugify` filter:

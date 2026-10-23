@@ -1,11 +1,28 @@
 export default {
-	title: "Eleventy Base Blog v9",
-	url: "https://example.com/",
-	language: "en",
-	description: "I am writing about my experiences as a naval navel-gazer.",
-	author: {
-		name: "Your Name Here",
-		email: "youremailaddress@example.com",
-		url: "https://example.com/about-me/"
-	}
-}
+  "title": "Justin Shrake",
+  "url": "https://jshrake.com/",
+  "language": "en",
+  "description": "my blog",
+  "feed": {
+    "subtitle": "my blog",
+    "filename": "feed.xml",
+    "path": "/feed/feed.xml",
+    "id": "https://jshrake.com/"
+  },
+  "jsonfeed": {
+    "path": "/feed/feed.json",
+    "url": "https://jshrake.com/feed/feed.json"
+  },
+  "author": {
+    "name": "Justin Shrake",
+    "email": "hc19ysv9z@mozmail.com",
+    "url": "https://jshrake.com/about"
+  },
+  "socials": {
+    "email": "hc19ysv9z@mozmail.com",
+    "github": "jshrake",
+    "x": "j2rgb",
+    "instagram": "j2rgb",
+    "mastodon": "https://mastodon.social/@jshrake"
+  }
+};

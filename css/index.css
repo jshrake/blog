@@ -76,6 +76,10 @@ a[href]:visited {
 main {
   padding: 1rem;
 }
+/* h1–h4 retain their existing static anchors; upstream enhances h5–h6. */
+heading-anchors {
+  display: contents;
+}
 main :first-child {
   margin-top: 0;
 }
@@ -124,6 +128,15 @@ code {
 }
 
 /* Header */
+.visually-hidden:not(:focus):not(:active) {
+  clip-path: inset(50%);
+  height: 1px;
+  width: 1px;
+  overflow: hidden;
+  position: absolute;
+  white-space: nowrap;
+}
+
 .home {
   float: left;
   padding: 0 1rem;
@@ -309,11 +322,4 @@ a[href].direct-link:focus:visited,
   .art-grid {
     grid-template-columns: repeat(2, 1fr);
   }
-}
-
-/* models */
-.model {
-  width: 90vw;
-  height: 1024px;
-  text-align: center;
 }
