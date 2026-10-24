@@ -1,5 +1,10 @@
 [
     {
+        "title": "Afterlight",
+        "image": "/img/art/afterlight.webp",
+        "link": "https://jshrake.github.io/j2rgb/particle-line-growth/?config=macro-4-loop"
+    },
+    {
         "image": "/img/art/pressure-radial-flow.webp",
         "link": "https://jshrake.github.io/j2rgb/pressure-radial-flow/"
     },
