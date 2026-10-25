@@ -1,5 +1,10 @@
 [
     {
+        "title": "Curl Noise Bubbles",
+        "image": "/img/art/curl-noise-bubbles.webp",
+        "link": "https://jshrake.github.io/j2rgb/curl-noise-bubbles/?config=monochrome-cinematic-individuals"
+    },
+    {
         "title": "Afterlight",
         "image": "/img/art/afterlight.webp",
         "link": "https://jshrake.github.io/j2rgb/particle-line-growth/?config=macro-4-loop"
