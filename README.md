@@ -65,6 +65,8 @@ Set an artwork's optional `gif` in `_data/art.json` to an archived GIF's public
 path to use it on the homepage. Only the still image loads initially. The GIF URL
 stays in `data-gif` until pointer hover; `_includes/art-previews.js` loads the GIF
 then overlays it once ready. Leaving the card removes it and restores the still.
+Generate each cover from frame zero of its selected GIF as a lossless WebP at the
+same dimensions, so the still and animation have identical framing and pixels.
 Repeat hovers can reuse the browser cache. Touch and reduced-motion visitors keep
 the still image. GIFs are never automatically preloaded.
 
