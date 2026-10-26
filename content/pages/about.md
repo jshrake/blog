@@ -10,7 +10,7 @@ eleventyNavigation:
 
 # About
 
-I'm a software developer with eleven years of professional experience building interactive real-time graphics software across a variety of platforms. I live in Los Angeles, California and have a BS in Mathematics and a minor in Statistical Sciences from the University of California, Santa Barbara. I currently work at [NVIDIA](https://en.wikipedia.org/wiki/Nvidia) building [Omniverse](https://en.wikipedia.org/wiki/Nvidia_Omniverse), a real-time simulation platform.
+I'm a software developer with fifteen years of professional experience building interactive real-time graphics software across a variety of platforms. I live in Los Angeles, California and have a BS in Mathematics and a minor in Statistical Sciences from the University of California, Santa Barbara. I currently work at [NVIDIA](https://en.wikipedia.org/wiki/Nvidia) building [Omniverse](https://en.wikipedia.org/wiki/Nvidia_Omniverse), a real-time simulation platform.
 
 My interests include [programming](/software), mathematics, [generative art](https://x.com/j2rgb), [making maps](https://sketchfab.com/jshrake), surfing, hiking, and playing guitar.
 
