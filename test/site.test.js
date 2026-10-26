@@ -78,8 +78,8 @@ test("identity, navigation, social icons, art assets, and metadata survive the u
   }
   const $ = html(output("production"), "index.html");
   assert.equal($("title").text(), "Justin Shrake | Art");
-  assert.equal($(".art-grid-item").length, 4);
-  for (const image of ["curl-noise-bubbles.webp", "afterlight.webp", "pressure-radial-flow.webp", "particle-shader-machine-static.webp"]) {
+  assert.equal($(".art-grid-item").length, 5);
+  for (const image of ["cube-surface-flow.webp", "curl-noise-bubbles.webp", "afterlight.webp", "pressure-radial-flow.webp", "particle-shader-machine-static.webp"]) {
     assert.deepEqual(readFileSync(path.join(output("production"), "img/art", image)), readFileSync(path.join(root, "public/img/art", image)));
   }
 });
