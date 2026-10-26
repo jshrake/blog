@@ -31,10 +31,14 @@
     },
     {
         "image": "/img/art/pressure-radial-flow.webp",
-        "link": "https://jshrake.github.io/j2rgb/pressure-radial-flow/"
+        "link": "https://jshrake.github.io/j2rgb/pressure-radial-flow/",
+        "title": "∂ₜv = −κ∇ρ + μs r̂",
+        "gif": "/img/art/gifs/2026.10.25-18.59.05-94c19d9-pressure-radial-flow/pressure-radial-flow-default-640-25fps.gif"
     },
     {
         "image": "/img/art/particle-shader-machine-static.webp",
-        "link": "https://jshrake.github.io/j2rgb/particle-shader-machine/"
+        "link": "https://jshrake.github.io/j2rgb/particle-shader-machine/",
+        "title": "particle shader machine",
+        "gif": "/img/art/gifs/2026.10.25-19.01.29-94c19d9-particle-shader-machine/particle-shader-machine-default-600-25fps.gif"
     }
 ]

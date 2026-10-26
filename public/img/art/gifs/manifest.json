@@ -93,6 +93,72 @@
       "frames": 150,
       "durationMs": 3000,
       "loopCount": 0
+    },
+    {
+      "file": "/img/art/gifs/2026.10.25-18.59.05-94c19d9-pressure-radial-flow/pressure-radial-flow-default-640-25fps.gif",
+      "sketch": "pressure-radial-flow",
+      "config": "default",
+      "sketchUrl": "https://jshrake.github.io/j2rgb/pressure-radial-flow/",
+      "sourceCapture": "2026.10.25-18.59.5-94c19d9-j2rgb-∂ₜv-=-−κ∇ρ-+-μs-r̂-5653846818831152",
+      "sourceFile": "pressure-radial-flow-default-640-25fps.gif",
+      "sourceCommit": "94c19d9d82699433eb9208c4053e28b7730f3047",
+      "configSnapshot": "/img/art/gifs/2026.10.25-18.59.05-94c19d9-pressure-radial-flow/config.json",
+      "configSource": "2026.10.25-18.59.5-94c19d9-j2rgb-∂ₜv-=-−κ∇ρ-+-μs-r̂-5653846818831152/config.json",
+      "bytes": 17770373,
+      "sha256": "cb75ff6228ff499ea41b1b3d1a1cae38db3ea74c2296bc653420285be3d283c6",
+      "width": 640,
+      "height": 640,
+      "frames": 100,
+      "durationMs": 4000,
+      "loopCount": 1,
+      "sourceFrameStart": 0,
+      "sourceFrameCount": 240,
+      "sourceFps": 60,
+      "sourceFrameSampling": {
+        "period": 12,
+        "offsets": [
+          0,
+          2,
+          4,
+          7,
+          9
+        ]
+      },
+      "frameDelayMs": 40,
+      "notes": "Four-second, play-once excerpt; no loop seam. Unmodified featured default captured through the shared gallery at 1080×1080, scaled to 640×640 with Lanczos and a 256-color Bayer palette (scale 5). The source window begins at capture frame 0; absolute animation startup frame was not recorded. Random seed: 5653846818831152."
+    },
+    {
+      "file": "/img/art/gifs/2026.10.25-19.01.29-94c19d9-particle-shader-machine/particle-shader-machine-default-600-25fps.gif",
+      "sketch": "particle-shader-machine",
+      "config": "default",
+      "sketchUrl": "https://jshrake.github.io/j2rgb/particle-shader-machine/",
+      "sourceCapture": "2026.10.25-19.1.29-94c19d9-particle-shader-machine-7292680543518512",
+      "sourceFile": "particle-shader-machine-default-600-25fps.gif",
+      "sourceCommit": "94c19d9d82699433eb9208c4053e28b7730f3047",
+      "configSnapshot": "/img/art/gifs/2026.10.25-19.01.29-94c19d9-particle-shader-machine/config.json",
+      "configSource": "2026.10.25-19.1.29-94c19d9-particle-shader-machine-7292680543518512/config.json",
+      "bytes": 15860290,
+      "sha256": "e0715e3915426cc198410216707e64fcfd4881e91d8f698fcde7e0ec1b0e2760",
+      "width": 600,
+      "height": 600,
+      "frames": 100,
+      "durationMs": 4000,
+      "loopCount": 1,
+      "sourceFrameStart": 120,
+      "sourceFrameCount": 240,
+      "sourceFps": 60,
+      "sourceFrameSampling": {
+        "period": 12,
+        "offsets": [
+          0,
+          2,
+          4,
+          7,
+          9
+        ]
+      },
+      "frameDelayMs": 40,
+      "notes": "Four-second, play-once excerpt; no loop seam. Unmodified featured default captured through the shared gallery at 1080×1080, scaled to 600×600 with Lanczos and a 256-color Bayer palette (scale 5). The source window begins at capture frame 120; absolute animation startup frame was not recorded. Random seed: 7292680543518512."
     }
   ]
 }

@@ -49,11 +49,11 @@ Line Art 03 retains its existing `/img/art/line-art-03-trying.gif` URL.
 Keep one GIF per artwork, matching the homepage selection in `_data/art.json`.
 [`manifest.json`](public/img/art/gifs/manifest.json) indexes these exports. Each entry
 records the sketch/config, published sketch URL, source capture and commit when
-known, dimensions, frame count, encoded duration, loop count (`0` means infinite),
+known, dimensions, frame count, encoded duration, loop count (`0` means infinite; `1` plays once),
 file size, and SHA-256. Saved capture configs or configs recovered from the capture
 commit are kept alongside the GIFs. Missing settings are explicitly documented;
 a current preset is not substituted for missing history.
-The archive contains five GIFs (69.0 MB) from five captures. Original captures and
+The archive contains seven GIFs (102.6 MB) from seven captures. Original captures and
 alternate exports remain in `~/Documents/j2rgb`.
 
 When featuring a new deployed config, add its selected GIF's original bytes and

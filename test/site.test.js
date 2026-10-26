@@ -107,7 +107,7 @@ test("GIF archive preserves every indexed export and homepage previews remain ho
   }
   for (const [name, prefix] of [["production", ""], ["prefix", "/preview"]]) {
     const $ = html(output(name), "index.html");
-    assert.equal($(".art-grid-item[data-gif]").length, 5);
+    assert.equal($(".art-grid-item[data-gif]").length, 7);
     assert.equal($(".art-grid-animation").length, 0, "animation images are created on hover");
     for (const card of $(".art-grid-item[data-gif]").toArray()) {
       const gif = indexed.get($(card).attr("data-gif").slice(prefix.length));

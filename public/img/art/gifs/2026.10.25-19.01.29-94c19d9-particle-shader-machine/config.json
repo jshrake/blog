@@ -1,0 +1,167 @@
+{
+  "particleCount": 989130,
+  "spiralRadius": 1.9999999999999998,
+  "spiralLength": 5,
+  "startShape": "circle",
+  "endShape": "triangle",
+  "startShapeRotation": 0,
+  "endShapeRotation": 0,
+  "nestedDishCount": 12,
+  "nestedDishShrink": 0.83,
+  "spiralTurnsMin": 5.551115123125783e-17,
+  "spiralTurnsMax": 0,
+  "shapeMorphDelay": 5.204170427930421e-18,
+  "ringTimingVariance": 1,
+  "noiseStrength": 1.2,
+  "noiseFraction": 6,
+  "cameraDistance": 10.375551660829686,
+  "cameraAzimuth": -0.4950781250000005,
+  "cameraElevation": 0.2742578124999998,
+  "turntableEnabled": true,
+  "loopFrames": 2880,
+  "particleMinSize": 0.5000000000000001,
+  "particleMaxSize": 9.999999999999998,
+  "particleSizeExponent": 200,
+  "currentPalette": "dark-warm-amber",
+  "renderConfig": {
+    "bloom": {
+      "threshold": 2.9347826086956523,
+      "intensity": 0,
+      "strength": 0
+    },
+    "trails": {
+      "decayRate": 0,
+      "blurFrames": 10
+    },
+    "chromatic": {
+      "strength": 0.07608695652173914,
+      "redOffset": 0.01,
+      "greenOffset": 0,
+      "blueOffset": -0.01
+    },
+    "backgroundColor": [0, 0, 0, 1],
+    "subFrameCount": 1,
+    "particleBlendMode": "additive",
+    "postProcessing": {
+      "toneMapping": "ACES",
+      "gamma": 2.2,
+      "exposure": 1,
+      "hdrIntensity": 1
+    }
+  },
+  "simulation": {
+    "fixedStepSeconds": 0.002777777777777778,
+    "maxFrameDeltaSeconds": 0.008333333333333333,
+    "maxStepsPerFrame": 1
+  },
+  "field": {
+    "resolution": 512,
+    "densityThreshold": 0.7800000000000001,
+    "collisionStrength": 1.7,
+    "alignmentStrength": 20,
+    "jitterStrength": 0,
+    "jitterFrequency": 0.1,
+    "splatScale": 1.88
+  },
+  "boundary": {
+    "radius": 0.94,
+    "restitution": 1.19,
+    "edgeSoftness": 0.19,
+    "wallSlideDamping": 80,
+    "wallRecoveryStrength": 18.259999999999998
+  },
+  "particles": {
+    "count": 159000,
+    "radiusMin": 0.0010000000000000002,
+    "radiusMax": 0.02379999999999999,
+    "radiusExponent": 40,
+    "initialSpeed": 0.54,
+    "drag": 3.3899999999999997,
+    "renderScale": 792,
+    "speedColorScale": 4
+  },
+  "radial": {
+    "sizePositionInfluence": 0.64,
+    "sizePositionExponent": 6,
+    "sizeResponseRate": 23.5,
+    "migrationStrength": 6.2,
+    "largeEscapeStrength": 12.83,
+    "largeEscapeDensityBias": 2.56
+  },
+  "color": {
+    "palette": "teal-yellow",
+    "randomInfluence": 2.3899999999999997,
+    "saturation": 2,
+    "brightness": 0.62,
+    "speedInfluence": 1.196959198423997e-16
+  },
+  "render": {
+    "bloom": {
+      "threshold": 3,
+      "intensity": 0,
+      "strength": 0
+    },
+    "trails": {
+      "decayRate": 1.41,
+      "blurFrames": 10
+    },
+    "chromatic": {
+      "strength": 0.033,
+      "redOffset": 0.005,
+      "greenOffset": 0,
+      "blueOffset": -0.005
+    },
+    "backgroundColor": [0, 0, 0, 1],
+    "subFrameCount": 1,
+    "particleBlendMode": "alpha",
+    "postProcessing": {
+      "toneMapping": "ACES",
+      "gamma": 2.2,
+      "hdrIntensity": 1
+    }
+  },
+  "textureSize": 1024,
+  "fixedStepSeconds": 0.009722222222222222,
+  "maxFrameDeltaSeconds": 0.08333333333333333,
+  "maxStepsPerFrame": 8,
+  "tilingSiteCount": 48,
+  "tilingCellSpread": 0.5,
+  "tilingEdgeNoiseScale": 4.499999999999999,
+  "tilingEdgeNoiseStrength": 0.98,
+  "tilingCycleSeconds": 3.1999999999999993,
+  "tilingTransitionFraction": 1,
+  "tilingTransitionStagger": 0.31999999999999995,
+  "edgeFlowStrength": 0.5700000000000001,
+  "edgeFlowSpeed": 4,
+  "sphereRadius": 0.72,
+  "pointScale": 1,
+  "renderSoftness": 7.9,
+  "renderAlphaMin": 0.16399999999999998,
+  "renderAlphaMax": 1,
+  "renderInkMin": 0.19999999999999998,
+  "renderInkMax": 1,
+  "renderExposure": 1.4000000000000008,
+  "trailDecay": 5.22,
+  "cameraYaw": 0.7524073464102256,
+  "cameraPitch": -0.5000000000000001,
+  "cameraFov": 58,
+  "cameraTurntable": false,
+  "postProcessing": {
+    "toneMapping": "None",
+    "exposure": 1,
+    "gamma": 1,
+    "grain": 0,
+    "grainSize": 1,
+    "grainColor": 0,
+    "vignette": 0,
+    "motionBlur": 0,
+    "hdrIntensity": 1,
+    "bloom": 0,
+    "bloomThreshold": 1,
+    "bloomIntensity": 1
+  },
+  "canvas": {
+    "resolution": 1080,
+    "aspectRatio": "1:1"
+  }
+}

@@ -1,0 +1,173 @@
+{
+  "simulation": {
+    "fixedStepSeconds": 0.002777777777777778,
+    "maxFrameDeltaSeconds": 0.008333333333333333,
+    "maxStepsPerFrame": 1
+  },
+  "field": {
+    "resolution": 1024,
+    "densityThreshold": 0.2500000000000001,
+    "collisionStrength": 1.9999999999999998,
+    "alignmentStrength": 20,
+    "jitterStrength": 0,
+    "jitterFrequency": 0.1,
+    "splatScale": 6,
+    "maxFieldSplatPixels": 32
+  },
+  "boundary": {
+    "radius": 0.9799999999999999,
+    "restitution": 1.2,
+    "edgeSoftness": 0.03,
+    "wallSlideDamping": 80,
+    "wallRecoveryStrength": 18.259999999999998
+  },
+  "particles": {
+    "count": 31000,
+    "radiusMin": 0.012999999999999998,
+    "radiusMax": 0.2447,
+    "radiusExponent": 152.2,
+    "initialSpeed": 2.42861286636753e-17,
+    "drag": 0.5199999999999998,
+    "renderScale": 792,
+    "speedColorScale": 4
+  },
+  "radial": {
+    "sizePositionInfluence": 0.5800000000000001,
+    "sizePositionExponent": 5.04,
+    "sizeResponseRate": 28,
+    "migrationStrength": 10,
+    "largeEscapeStrength": 20,
+    "largeEscapeDensityBias": 4
+  },
+  "color": {
+    "palette": "pure-black",
+    "backgroundColor": "white",
+    "particleAlpha": 0.91,
+    "particleSoftness": 1,
+    "particleEdgeSoftness": 0,
+    "blackOutline": false,
+    "blackOutlineWidth": 0.31,
+    "outlineColor": "white"
+  },
+  "camera": {
+    "zoom": 0.9398301169264502
+  },
+  "render": {
+    "bloom": {
+      "threshold": 3,
+      "intensity": 0,
+      "strength": 0
+    },
+    "trails": {
+      "decayRate": 1.59,
+      "blurFrames": 10
+    },
+    "chromatic": {
+      "strength": 0.707,
+      "redOffset": 0.005,
+      "greenOffset": 0,
+      "blueOffset": -0.005
+    },
+    "backgroundColor": [1, 1, 1, 1],
+    "subFrameCount": 1,
+    "particleBlendMode": "alpha",
+    "postProcessing": {
+      "toneMapping": "ACES",
+      "gamma": 2.2,
+      "hdrIntensity": 1
+    }
+  },
+  "textureSize": 1024,
+  "particleCount": 989130,
+  "fixedStepSeconds": 0.009722222222222222,
+  "maxFrameDeltaSeconds": 0.08333333333333333,
+  "maxStepsPerFrame": 8,
+  "tilingSiteCount": 48,
+  "tilingCellSpread": 0.5,
+  "tilingEdgeNoiseScale": 4.499999999999999,
+  "tilingEdgeNoiseStrength": 0.98,
+  "tilingCycleSeconds": 3.1999999999999993,
+  "tilingTransitionFraction": 1,
+  "tilingTransitionStagger": 0.31999999999999995,
+  "edgeFlowStrength": 0.5700000000000001,
+  "edgeFlowSpeed": 4,
+  "sphereRadius": 0.72,
+  "pointScale": 1,
+  "particleMinSize": 0.5000000000000001,
+  "particleMaxSize": 9.999999999999998,
+  "particleSizeExponent": 200,
+  "renderSoftness": 7.9,
+  "renderAlphaMin": 0.16399999999999998,
+  "renderAlphaMax": 1,
+  "renderInkMin": 0.19999999999999998,
+  "renderInkMax": 1,
+  "renderExposure": 1.4000000000000008,
+  "trailDecay": 5.22,
+  "cameraDistance": 10.375551660829686,
+  "cameraYaw": 0.7524073464102256,
+  "cameraPitch": -0.5000000000000001,
+  "cameraFov": 58,
+  "cameraTurntable": false,
+  "spiralRadius": 1.9999999999999998,
+  "spiralLength": 5,
+  "startShape": "circle",
+  "endShape": "triangle",
+  "startShapeRotation": 0,
+  "endShapeRotation": 0,
+  "nestedDishCount": 12,
+  "nestedDishShrink": 0.83,
+  "spiralTurnsMin": 5.551115123125783e-17,
+  "spiralTurnsMax": 0,
+  "shapeMorphDelay": 5.204170427930421e-18,
+  "ringTimingVariance": 1,
+  "noiseStrength": 1.2,
+  "noiseFraction": 6,
+  "cameraAzimuth": -0.4950781250000005,
+  "cameraElevation": 0.2742578124999998,
+  "turntableEnabled": true,
+  "currentPalette": "dark-warm-amber",
+  "renderConfig": {
+    "bloom": {
+      "threshold": 2.9347826086956523,
+      "intensity": 0,
+      "strength": 0
+    },
+    "trails": {
+      "decayRate": 0,
+      "blurFrames": 10
+    },
+    "chromatic": {
+      "strength": 0.07608695652173914,
+      "redOffset": 0.01,
+      "greenOffset": 0,
+      "blueOffset": -0.01
+    },
+    "backgroundColor": [0, 0, 0, 1],
+    "subFrameCount": 1,
+    "particleBlendMode": "additive",
+    "postProcessing": {
+      "toneMapping": "ACES",
+      "gamma": 2.2,
+      "exposure": 1,
+      "hdrIntensity": 1
+    }
+  },
+  "postProcessing": {
+    "toneMapping": "None",
+    "exposure": 1,
+    "gamma": 1,
+    "grain": 0,
+    "grainSize": 1,
+    "grainColor": 0,
+    "vignette": 0,
+    "motionBlur": 0,
+    "hdrIntensity": 1,
+    "bloom": 0,
+    "bloomThreshold": 1,
+    "bloomIntensity": 1
+  },
+  "canvas": {
+    "resolution": 1080,
+    "aspectRatio": "1:1"
+  }
+}
