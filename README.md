@@ -53,7 +53,7 @@ known, dimensions, frame count, encoded duration, loop count (`0` means infinite
 file size, and SHA-256. Saved capture configs or configs recovered from the capture
 commit are kept alongside the GIFs. Missing settings are explicitly documented;
 a current preset is not substituted for missing history.
-The archive contains seven GIFs (102.6 MB) from seven captures. Original captures and
+The archive contains seven GIFs (162.4 MB) from seven captures. Original captures and
 alternate exports remain in `~/Documents/j2rgb`.
 
 When featuring a new deployed config, add its selected GIF's original bytes and
