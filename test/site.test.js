@@ -1,6 +1,7 @@
 import assert from "node:assert/strict";
 import { after, before, test } from "node:test";
 import { spawnSync } from "node:child_process";
+import { createHash } from "node:crypto";
 import { cpSync, existsSync, mkdtempSync, readdirSync, readFileSync, rmSync, symlinkSync, writeFileSync } from "node:fs";
 import { tmpdir } from "node:os";
 import path from "node:path";
@@ -79,8 +80,46 @@ test("identity, navigation, social icons, art assets, and metadata survive the u
   const $ = html(output("production"), "index.html");
   assert.equal($("title").text(), "Justin Shrake | Art");
   assert.equal($(".art-grid-item").length, 7);
-  for (const image of ["line-art-03-trying.gif", "cube-curve-follow.webp", "cube-surface-flow.webp", "curl-noise-bubbles.webp", "afterlight.webp", "pressure-radial-flow.webp", "particle-shader-machine-static.webp"]) {
+  for (const image of ["line-art-03-trying.gif", "line-art-0003.webp", "cube-curve-follow.webp", "cube-surface-flow.webp", "curl-noise-bubbles.webp", "afterlight.webp", "pressure-radial-flow.webp", "particle-shader-machine-static.webp"]) {
     assert.deepEqual(readFileSync(path.join(output("production"), "img/art", image)), readFileSync(path.join(root, "public/img/art", image)));
+  }
+});
+
+test("GIF archive preserves every indexed export and homepage previews remain hover-only", () => {
+  const archive = JSON.parse(read(root, "public/img/art/gifs/manifest.json"));
+  const indexed = new Map(archive.gifs.map(gif => [gif.file, gif]));
+  const selected = JSON.parse(read(root, "_data/art.json")).map(item => item.gif).filter(Boolean);
+  assert.deepEqual([...indexed.keys()].sort(), selected.toSorted(), "archive contains only the selected homepage GIFs");
+  const archived = readdirSync(path.join(root, "public/img/art"), { recursive: true })
+    .filter(file => file.endsWith(".gif")).map(file => `/img/art/${file}`).sort();
+  assert.deepEqual([...indexed.keys()].sort(), archived);
+  assert.equal(indexed.size, archive.gifs.length, "archive URLs are unique");
+  assert.equal(new Set(archive.gifs.map(gif => gif.sha256)).size, archive.gifs.length, "identical exports are not duplicated");
+  for (const gif of archive.gifs) {
+    const bytes = readFileSync(path.join(root, "public", gif.file));
+    assert.match(bytes.toString("ascii", 0, 6), /^GIF8[79]a$/);
+    assert.equal(bytes.length, gif.bytes);
+    assert.equal(createHash("sha256").update(bytes).digest("hex"), gif.sha256, gif.file);
+    assert.equal(bytes.readUInt16LE(6), gif.width);
+    assert.equal(bytes.readUInt16LE(8), gif.height);
+    if (gif.configSnapshot) JSON.parse(read(root, `public${gif.configSnapshot}`));
+    else assert.ok(gif.notes, "missing capture settings are documented");
+  }
+  for (const [name, prefix] of [["production", ""], ["prefix", "/preview"]]) {
+    const $ = html(output(name), "index.html");
+    assert.equal($(".art-grid-item[data-gif]").length, 5);
+    assert.equal($(".art-grid-animation").length, 0, "animation images are created on hover");
+    for (const card of $(".art-grid-item[data-gif]").toArray()) {
+      const gif = indexed.get($(card).attr("data-gif").slice(prefix.length));
+      assert.ok(gif, "selected preview belongs to the archive");
+      assert.equal($(card).attr("href"), gif.sketchUrl, "preview matches the published config");
+      assert.equal($(card).find("img").length, 1, "still image remains the fallback");
+    }
+    for (const element of $("[src], [srcset], link[href]").toArray()) {
+      for (const attribute of ["src", "srcset", "href"]) {
+        assert.doesNotMatch($(element).attr(attribute) || "", /\.gif(?:\s|,|\?|$)/i, "no GIF is requested by initial markup");
+      }
+    }
   }
 });
 
@@ -90,8 +129,8 @@ test("all local links, assets, and fragments resolve, including subdirectory bui
     for (const file of files(directory)) {
       const pagePath = file === "404.html" ? "/404.html" : `/${file.replace(/index\.html$/, "")}`;
       const $ = html(directory, file);
-      for (const element of $("[href], [src], [srcset]").toArray()) {
-        const values = [$(element).attr("href"), $(element).attr("src"), ...($(element).attr("srcset") || "").split(",").map(value => value.trim().split(/\s+/)[0])].filter(Boolean);
+      for (const element of $("[href], [src], [srcset], [data-gif]").toArray()) {
+        const values = [$(element).attr("href"), $(element).attr("src"), $(element).attr("data-gif"), ...($(element).attr("srcset") || "").split(",").map(value => value.trim().split(/\s+/)[0])].filter(Boolean);
         for (const value of values) {
           const url = new URL(value, `https://jshrake.com${prefix}${pagePath}`);
           if (url.origin !== "https://jshrake.com") continue;

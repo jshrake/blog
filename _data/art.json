@@ -1,28 +1,33 @@
 [
     {
         "title": "Line Art 03 — Trying",
-        "image": "/img/art/line-art-03-trying.gif",
-        "link": "https://jshrake.github.io/j2rgb/line-art-0003/?config=trying"
+        "image": "/img/art/line-art-0003.webp",
+        "link": "https://jshrake.github.io/j2rgb/line-art-0003/?config=trying",
+        "gif": "/img/art/line-art-03-trying.gif"
     },
     {
         "title": "Cube Curve Follow",
         "image": "/img/art/cube-curve-follow.webp",
-        "link": "https://jshrake.github.io/j2rgb/cube-curve-follow/?config=face-blink"
+        "link": "https://jshrake.github.io/j2rgb/cube-curve-follow/?config=face-blink",
+        "gif": "/img/art/gifs/2026.10.24-11.19.34-2ed1053-Cube-Relay/face-blink-1080-25fps.gif"
     },
     {
         "title": "Cube Surface Flow",
         "image": "/img/art/cube-surface-flow.webp",
-        "link": "https://jshrake.github.io/j2rgb/cube-surface-flow/?config=good"
+        "link": "https://jshrake.github.io/j2rgb/cube-surface-flow/?config=good",
+        "gif": "/img/art/gifs/2026.10.22-cube-surface-flow-good-seamless/cube-surface-flow-good-twitter.gif"
     },
     {
         "title": "Curl Noise Bubbles",
         "image": "/img/art/curl-noise-bubbles.webp",
-        "link": "https://jshrake.github.io/j2rgb/curl-noise-bubbles/?config=monochrome-cinematic-individuals"
+        "link": "https://jshrake.github.io/j2rgb/curl-noise-bubbles/?config=monochrome-cinematic-individuals",
+        "gif": "/img/art/gifs/2026.10.25-16.27.12-ce230e2-Curl-Drift/individuals-720-50fps-clean-15mb.gif"
     },
     {
         "title": "Afterlight",
         "image": "/img/art/afterlight.webp",
-        "link": "https://jshrake.github.io/j2rgb/particle-line-growth/?config=macro-4-loop"
+        "link": "https://jshrake.github.io/j2rgb/particle-line-growth/?config=macro-4-loop",
+        "gif": "/img/art/gifs/2026.10.23-20.47.35-08851e5-Particle-Line-Growth/macro-4-loop.gif"
     },
     {
         "image": "/img/art/pressure-radial-flow.webp",

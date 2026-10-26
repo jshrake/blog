@@ -7,8 +7,10 @@ eleventyNavigation:
 ---
 <div class="art-grid">
 {%- for item in art %}
-  <a href="{{ item.link }}" class="art-grid-item">
+  <a href="{{ item.link }}" class="art-grid-item"{% if item.gif %} data-gif="{{ item.gif | htmlBaseUrl }}"{% endif %}>
     <img src="{{ item.image }}" alt="{{ item.title }}" loading="lazy">
   </a>
 {%- endfor %}
 </div>
+
+{% js %}{% include "art-previews.js" %}{% endjs %}

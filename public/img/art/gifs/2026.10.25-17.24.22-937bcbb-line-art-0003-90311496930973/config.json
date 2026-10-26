@@ -1,0 +1,104 @@
+{
+  "bandCount": 61,
+  "particlesPerBand": 1024,
+  "bandWidth": 0.3930417268172554,
+  "bandDrawOrder": "left",
+  "bandOrderSeed": 1,
+  "canvasAngle": -37.17391304347828,
+  "waveFrequencyX": 0.9,
+  "waveFrequencyY": -0.8,
+  "noiseScaleX": 1.6793478260869565,
+  "noiseScaleY": 0.9,
+  "noiseFunction": "perlin",
+  "noiseParameters": {
+    "perlin": {
+      "frequency": 0.5842391304347827,
+      "offsetX": 10,
+      "offsetY": 10
+    },
+    "simplex": {
+      "frequency": 2,
+      "offsetX": 0,
+      "offsetY": 0
+    },
+    "cellular": {
+      "frequency": 4,
+      "offsetX": 0,
+      "offsetY": 0,
+      "jitter": 1,
+      "feature": 0
+    },
+    "fractal": {
+      "frequency": 2,
+      "offsetX": 0,
+      "offsetY": 0,
+      "octaves": 4,
+      "lacunarity": 2,
+      "gain": 0.5
+    },
+    "ridged": {
+      "frequency": 2,
+      "offsetX": 0,
+      "offsetY": 0,
+      "octaves": 4,
+      "lacunarity": 2,
+      "gain": 0.5,
+      "sharpness": 2
+    },
+    "turbulence": {
+      "frequency": 2,
+      "offsetX": 0,
+      "offsetY": 0,
+      "octaves": 4,
+      "lacunarity": 2,
+      "gain": 0.5,
+      "sharpness": 1
+    }
+  },
+  "noiseSteps": 0,
+  "bounce": 1,
+  "motionAmount": 1,
+  "outlineEnabled": true,
+  "outlineWidth": 3.3043478260869565,
+  "outlineColor": "#000000",
+  "outlineOpacity": 1,
+  "outlineSoftness": 300,
+  "edgeSoftness": 135.875,
+  "shadingMode": "flat",
+  "material": {
+    "tint": "#ffffff",
+    "roughness": 0.19,
+    "metallic": 0.18,
+    "reflectance": 0.9,
+    "roundness": 0.18
+  },
+  "lighting": {
+    "keyColor": "#ffffff",
+    "keyIntensity": 5.5,
+    "keyAzimuth": 143,
+    "keyElevation": 45,
+    "fillColor": "#dceaff",
+    "fillIntensity": 2.8,
+    "fillAzimuth": 35,
+    "fillElevation": 60,
+    "ambientIntensity": 0.3
+  },
+  "background": 0.07065217391304347,
+  "currentPalette": "Purple Acropora",
+  "motionMode": "horizontal",
+  "loopFrames": 300,
+  "postProcessing": {
+    "toneMapping": "ACES",
+    "exposure": 1,
+    "gamma": 1,
+    "grain": 0,
+    "grainSize": 1,
+    "grainColor": 0,
+    "vignette": 0,
+    "motionBlur": 0,
+    "hdrIntensity": 1,
+    "bloom": 0,
+    "bloomThreshold": 1,
+    "bloomIntensity": 1
+  }
+}

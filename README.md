@@ -38,6 +38,36 @@ JSON Feed keeps the legacy `author` field alongside the current `authors` field.
 For subdirectory hosting, pass `--pathprefix=/your-prefix/`; HTML URL rewriting is
 handled by Eleventy's HTML base plugin rather than applying the `url` filter twice.
 
+## GIF archive and hover previews
+
+Selected GIF exports for the featured deployed configs live in `public/img/art/`.
+New exports and config snapshots are grouped by source capture under `gifs/`;
+Line Art 03 retains its existing `/img/art/line-art-03-trying.gif` URL.
+Keep one GIF per artwork, matching the homepage selection in `_data/art.json`.
+[`manifest.json`](public/img/art/gifs/manifest.json) indexes these exports. Each entry
+records the sketch/config, published sketch URL, source capture and commit when
+known, dimensions, frame count, encoded duration, loop count (`0` means infinite),
+file size, and SHA-256. Saved capture configs or configs recovered from the capture
+commit are kept alongside the GIFs. Missing settings are explicitly documented;
+a current preset is not substituted for missing history.
+The archive contains five GIFs (69.0 MB) from five captures. Original captures and
+alternate exports remain in `~/Documents/j2rgb`.
+
+When featuring a new deployed config, add its selected GIF's original bytes and
+metadata to the archive and update the homepage's `gif` path. Remove any replaced
+GIF and its unused config snapshot from the blog archive. Record the source
+filename, capture, and checksum so the chosen export can be traced back later.
+Keep an exact config snapshot when available; otherwise leave `configSnapshot`
+and `configSource` null with an explanatory note. `npm test` checks the inventory,
+file hashes, dimensions, config snapshots, and exact agreement with homepage selections.
+
+Set an artwork's optional `gif` in `_data/art.json` to an archived GIF's public
+path to use it on the homepage. Only the still image loads initially. The GIF URL
+stays in `data-gif` until pointer hover; `_includes/art-previews.js` loads the GIF
+then overlays it once ready. Leaving the card removes it and restores the still.
+Repeat hovers can reuse the browser cache. Touch and reduced-motion visitors keep
+the still image. GIFs are never automatically preloaded.
+
 ## Upgrade verification
 
 Rebased onto upstream `main` at

@@ -306,15 +306,25 @@ a[href].direct-link:focus:visited,
 }
 
 .art-grid-item {
+  position: relative;
   display: block;
   line-height: 0;
 }
 
 .art-grid-item img {
+  display: block;
   width: 100%;
   max-width: none;
   height: auto;
   border-radius: 4px;
+}
+
+.art-grid-item .art-grid-animation {
+  position: absolute;
+  inset: 0;
+  height: 100%;
+  object-fit: cover;
+  pointer-events: none;
 }
 
 @media (max-width: 600px) {
