@@ -301,9 +301,8 @@ a[href].direct-link:focus:visited,
 /* Art grid */
 .art-grid {
   display: grid;
-  grid-template-columns: repeat(3, 1fr);
+  grid-template-columns: repeat(auto-fit, minmax(16rem, 1fr));
   gap: 1rem;
-  max-width: 72rem;
 }
 
 .art-grid-item {
@@ -320,6 +319,6 @@ a[href].direct-link:focus:visited,
 
 @media (max-width: 600px) {
   .art-grid {
-    grid-template-columns: repeat(2, 1fr);
+    grid-template-columns: repeat(2, minmax(0, 1fr));
   }
 }
