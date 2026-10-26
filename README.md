@@ -40,6 +40,9 @@ handled by Eleventy's HTML base plugin rather than applying the `url` filter twi
 
 ## GIF archive and hover previews
 
+Use [`blog-publish-art`](skills/blog-publish-art/SKILL.md) for the publication
+workflow and the repeatable first-frame cover generation/verification commands.
+
 Selected GIF exports for the featured deployed configs live in `public/img/art/`.
 New exports and config snapshots are grouped by source capture under `gifs/`;
 Line Art 03 retains its existing `/img/art/line-art-03-trying.gif` URL.
