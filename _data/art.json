@@ -1,5 +1,10 @@
 [
     {
+        "title": "Cube Curve Follow",
+        "image": "/img/art/cube-curve-follow.webp",
+        "link": "https://jshrake.github.io/j2rgb/cube-curve-follow/?config=face-blink"
+    },
+    {
         "title": "Cube Surface Flow",
         "image": "/img/art/cube-surface-flow.webp",
         "link": "https://jshrake.github.io/j2rgb/cube-surface-flow/?config=good"
