@@ -1,0 +1,12 @@
+[
+  {
+    "title": "Card Game Calculator",
+    "description": "Calculate card draw probabilities with a hypergeometric distribution calculator.",
+    "link": "https://cardgamecalculator.com/",
+    "domain": "cardgamecalculator.com",
+    "image": "/img/software/card-game-calculator.jpg",
+    "imageAlt": "Card Game Calculator showing deck inputs, a 38.62% draw probability, and a probability distribution chart.",
+    "width": 376,
+    "height": 620
+  }
+]

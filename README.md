@@ -19,6 +19,10 @@ Netlify publishes `_site` using `npm run build`.
 ## Content and URLs
 
 - `content/index.njk` is the art homepage; `_data/art.json` contains its artwork.
+- `content/pages/software.njk` is the software gallery at `/software/`;
+  `_data/software.json` contains its cards and `public/img/software/` holds real
+  screenshots of the published apps. Navigation is Art, Software, Blog, About;
+  Art remains the homepage.
 - `content/pages/` contains About, Books, Games, Software, and the 404 page.
 - `content/blog/` contains posts. Their URLs remain `/posts/<filename>/`,
   including date prefixes, regardless of the new source directory.

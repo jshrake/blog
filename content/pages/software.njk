@@ -1,0 +1,20 @@
+---
+layout: layouts/base.njk
+title: "Justin Shrake | Software"
+description: "A gallery of software by Justin Shrake."
+permalink: "software/"
+eleventyNavigation:
+  key: Software
+  order: 2
+---
+<h1 class="visually-hidden">Software</h1>
+<div class="software-grid">
+{%- for item in software %}
+  <a href="{{ item.link }}" class="software-grid-item">
+    <img src="{{ item.image }}" alt="{{ item.imageAlt }}" width="{{ item.width }}" height="{{ item.height }}" loading="lazy">
+    <h2>{{ item.title }}</h2>
+    <p>{{ item.description }}</p>
+    <span class="software-grid-domain">{{ item.domain }}</span>
+  </a>
+{%- endfor %}
+</div>

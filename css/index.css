@@ -332,3 +332,44 @@ a[href].direct-link:focus:visited,
     grid-template-columns: repeat(2, minmax(0, 1fr));
   }
 }
+
+/* Software gallery */
+.software-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(min(100%, 24rem), 1fr));
+  gap: 1rem;
+}
+
+.software-grid-item {
+  display: block;
+  min-width: 0;
+  text-decoration: none;
+}
+
+.software-grid-item img {
+  display: block;
+  width: 100%;
+  max-width: none;
+  height: auto;
+  border: 1px solid var(--border-color);
+  border-radius: 4px;
+}
+
+.software-grid-item h2 {
+  margin: .75rem 0 .375rem;
+  font-size: 1.125rem;
+}
+
+.software-grid-item p {
+  margin: 0 0 .5rem;
+}
+
+.software-grid-domain {
+  color: var(--text-color-muted);
+  font-size: .875rem;
+}
+
+.software-grid-item:hover h2,
+.software-grid-item:focus-visible h2 {
+  text-decoration: underline;
+}

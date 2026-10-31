@@ -71,7 +71,7 @@ test("identity, navigation, social icons, art assets, and metadata survive the u
   for (const file of publicPages) {
     const $ = html(output("production"), file);
     assert.equal($(".home").text(), "Justin Shrake");
-    assert.deepEqual($(".nav a").map((_, node) => [[$(node).text(), $(node).attr("href")]]).get(), [["Art", "/"], ["Blog", "/blog/"], ["About", "/about/"]]);
+    assert.deepEqual($(".nav a").map((_, node) => [[$(node).text(), $(node).attr("href")]]).get(), [["Art", "/"], ["Software", "/software/"], ["Blog", "/blog/"], ["About", "/about/"]]);
     assert.equal($(".social-nav a[aria-label] svg.social-icon path").length, 5);
     assert.equal($(".social-nav a[rel='me']").attr("href"), "https://mastodon.social/@jshrake");
     assert.equal($("link[rel='icon']").attr("href"), "/img/favicon.ico");
