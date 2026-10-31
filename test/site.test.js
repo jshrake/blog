@@ -24,6 +24,8 @@ const posts = [
 const tags = ["another-tag", "card-games", "hiking", "homebrew", "number-2", "outdoors", "posts-with-two-tags", "probability", "second-tag", "web"];
 const publicPages = ["index.html", "404.html", ...["about", "blog", "books", "games", "software", "page-list", "tags", ...tags.map(tag => `tags/${tag}`)].map(page => `${page}/index.html`)];
 
+const appPages = ["yada/privacy/index.html", "yada/support/index.html"];
+
 function build(name, { cwd = root, development = false, prefix = "" } = {}) {
   const result = spawnSync(process.execPath, [path.join(root, "node_modules/@11ty/eleventy/cmd.cjs"), `--output=${output(name)}`, `--pathprefix=${prefix}`, "--quiet"], {
     cwd,
@@ -42,7 +44,7 @@ before(() => {
 after(() => rmSync(temp, { recursive: true, force: true }));
 
 test("production keeps every existing HTML route and publishes no drafts or starter examples", () => {
-  assert.deepEqual(files(output("production")), publicPages.toSorted());
+  assert.deepEqual(files(output("production")), [...publicPages, ...appPages].toSorted());
   assert.equal(html(output("production"), "blog/index.html")(".postlist-item").length, 0);
   const feed = JSON.parse(read(output("production"), "feed/feed.json"));
   assert.equal(feed.items.length, 0);
@@ -52,7 +54,7 @@ test("production keeps every existing HTML route and publishes no drafts or star
 });
 
 test("development keeps all eight draft URLs, dates, feeds, and previous/next links", () => {
-  assert.deepEqual(files(output("development")), [...publicPages, "page-list/1/index.html", ...posts.map(post => `posts/${post}/index.html`)].toSorted());
+  assert.deepEqual(files(output("development")), [...publicPages, ...appPages, "page-list/1/index.html", ...posts.map(post => `posts/${post}/index.html`)].toSorted());
   const feed = JSON.parse(read(output("development"), "feed/feed.json"));
   assert.equal(feed.items.length, posts.length);
   assert.deepEqual(feed.items.map(item => new URL(item.url).pathname).sort(), posts.map(post => `/posts/${post}/`).sort());
